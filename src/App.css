@@ -1,38 +1,109 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(to right, #2e3192, #1bffff);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 350px;
+  background-color: white;
   text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 50px auto 0;
+  padding: 20px 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+form input {
+  height: 150px;
+  width: 320px;
+  background-color: black;
   color: white;
+  padding: 0 5px;
+  text-align: right;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 0;
+  border-radius: 5px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
-.App-link {
-  color: #61dafb;
+.calc-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(80px, auto);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  margin: 8px;
+  border: 0;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 2px 3px 3px black;
+  cursor: pointer;
 }
+
+#clearAll {
+  grid-column: span 2;
+  background-color: red;
+}
+
+#clearAll:hover {
+  opacity: 0.9;
+}
+
+#deletion {
+  font-size: 24px;
+  background-color: rgb(252, 67, 0);
+}
+
+#deletion:hover {
+  opacity: 0.9;
+}
+
+.operator {
+  background-color: rgb(236, 126, 16);
+}
+
+.operator:hover {
+  opacity: 0.9;
+}
+
+#equator {
+  grid-column: span 2;
+  background-color: rgb(1, 105, 1);
+}
+
+#equator:hover {
+  opacity: 0.9;
+}
+
+.numbers {
+  background-color: black;
+}
+
+.numbers:hover {
+  opacity: 0.9;
+}
+
+/* input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+} */
